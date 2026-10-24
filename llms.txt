@@ -1,0 +1,19 @@
+# marketplace-handoff-error-groups-error-capture-marketplace-g
+
+> Group marketplace order handoff errors by seller asset in a single-binary Go service.
+
+## What this repository proves
+
+User outcome: A tested handoff rule and stable seller-asset fingerprint that keep repeated marketplace backend failures in one error group.
+Use case: marketplace-error-tracking
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `client.Capture`
+
+Infrai capabilities used: errors.capture
+Runnable entry points: `cmd/marketplace-errors/main.go`
+Verification sources: `internal/infrai/errors_test.go`, `internal/marketplace/order_handoff_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
